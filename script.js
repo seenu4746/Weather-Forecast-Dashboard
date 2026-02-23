@@ -1,4 +1,4 @@
-const API_KEY = "363f4a36112f54b1be084d0fc08165e1";
+const API_KEY = "YOUR_API_KEY";
 
 const cityInput = document.getElementById("cityInput");
 const searchBtn = document.getElementById("searchBtn");
@@ -158,3 +158,4 @@ unitToggle.addEventListener("click", () => {
 });
 
 loadCities();
+
