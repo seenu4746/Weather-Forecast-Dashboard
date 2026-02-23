@@ -1,0 +1,19 @@
+.weather-card {
+  background-color: #0284c7;
+  color: white;
+  padding: 16px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.clear {
+  background: linear-gradient(to bottom, #38bdf8, #e0f2fe);
+}
+
+.clouds {
+  background: linear-gradient(to bottom, #94a3b8, #e5e7eb);
+}
+
+.rain {
+  background: linear-gradient(to bottom, #0f172a, #334155);
+}

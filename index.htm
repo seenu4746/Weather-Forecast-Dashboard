@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Forecast App</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body id="body" class="min-h-screen flex justify-center items-center bg-sky-100">
+
+  <div class="w-full max-w-7xl bg-white rounded-xl shadow-lg p-6 space-y-6">
+
+    <!-- Header -->
+    <h1 class="text-2xl font-bold text-center text-sky-700">
+      Weather Forecast Dashboard
+    </h1>
+
+    <!-- Search Section -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <input
+        id="cityInput"
+        type="text"
+        placeholder="Enter city name"
+        class="border p-2 rounded"
+      />
+
+      <button id="searchBtn" class="bg-sky-600 text-white rounded p-2">
+        Search
+      </button>
+
+      <button id="locationBtn" class="bg-gray-700 text-white rounded p-2">
+        Use Current Location
+      </button>
+    </div>
+
+    <!-- Recent Cities -->
+    <select id="recentCities" class="border p-2 rounded w-full hidden"></select>
+
+    <!-- Error Message -->
+    <p id="errorMsg" class="text-red-600 text-center hidden"></p>
+
+    <!-- Current City -->
+    <div id="cityHeader" class="text-center hidden">
+      <h2 id="cityName" class="text-xl font-semibold"></h2>
+      <p id="date"></p>
+    </div>
+
+    <!-- 🔴 FIVE COLUMNS SECTION (IMPORTANT) -->
+    <div
+      id="fiveColumns"
+      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 hidden"
+    >
+      <div class="weather-card">
+        <p>Temperature</p>
+        <p id="temp"></p>
+        <button id="unitToggle" class="text-sm underline">°F</button>
+      </div>
+
+      <div class="weather-card">
+        <p>Feels Like</p>
+        <p id="feelsLike"></p>
+      </div>
+
+      <div class="weather-card">
+        <p>Humidity</p>
+        <p id="humidity"></p>
+      </div>
+
+      <div class="weather-card">
+        <p>Wind Speed</p>
+        <p id="wind"></p>
+      </div>
+
+      <div class="weather-card">
+        <p>Condition</p>
+        <img id="icon" class="mx-auto w-12 h-12" />
+      </div>
+    </div>
+
+    <!-- 5-Day Forecast -->
+    <div>
+      <h3 class="text-lg font-semibold mb-3">5-Day Forecast</h3>
+      <div
+        id="forecast"
+        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4"
+      ></div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
